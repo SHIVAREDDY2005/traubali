@@ -1,6 +1,6 @@
 import Reveal from "../animations/Reveal";
 import { footerData } from "../../constants/siteData";
-
+import greenLogo  from "../../assets/images/greenlogo.png";
 // Closes the experience with calls to action, navigation, and compliance details.
 function Footer() {
   // Returns visitors to the top of the one-page layout with smooth scrolling.
@@ -20,7 +20,7 @@ function Footer() {
       <div className="mx-auto max-w-[1560px] px-5 py-14 sm:px-6 sm:py-16 xl:px-8">
         <Reveal>
           <div className="flex flex-col items-center gap-10 sm:gap-12">
-            <img src="/logo.webp" alt="Taru Bali" className="h-28 sm:h-32" />
+            <img src=greenLogo alt="Taru Bali" className="h-28 sm:h-32" />
 
             <div className="text-center">
               <h2 className="mx-auto max-w-[14ch] font-display text-[2.4rem] uppercase leading-[0.95] tracking-[-0.06em] text-[#F3EEE4] sm:text-[3.6rem] xl:text-[4.6rem]">
