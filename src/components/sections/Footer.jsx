@@ -20,7 +20,7 @@ function Footer() {
       <div className="mx-auto max-w-[1560px] px-5 py-14 sm:px-6 sm:py-16 xl:px-8">
         <Reveal>
           <div className="flex flex-col items-center gap-10 sm:gap-12">
-            <img src=greenLogo alt="Taru Bali" className="h-28 sm:h-32" />
+            <img src={greenLogo} alt="Taru Bali" className="h-28 sm:h-32" />
 
             <div className="text-center">
               <h2 className="mx-auto max-w-[14ch] font-display text-[2.4rem] uppercase leading-[0.95] tracking-[-0.06em] text-[#F3EEE4] sm:text-[3.6rem] xl:text-[4.6rem]">
