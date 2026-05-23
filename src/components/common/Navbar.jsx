@@ -91,7 +91,7 @@ function Navbar() {
           <section className="flex justify-center">
             <a href="#top" className="block">
               <img
-                src="/taru-mark.svg"
+                src="src\assets\images\greenlogo.png"
                 alt="Taru Bali"
                 className={`w-auto transition-all duration-300 ${scrolled ? "h-14 sm:h-16" : "h-18 sm:h-24"}`}
               />
@@ -134,7 +134,7 @@ function Navbar() {
               className="flex h-full flex-col px-5 pb-10 pt-6 sm:px-8 xl:px-10"
             >
               <div className="flex items-center justify-between">
-                <img src="/taru-mark.svg" alt="Taru Bali" className="h-18 w-auto sm:h-20" />
+                <img src="src\assets\images\greenlogo.png" alt="Taru Bali" className="h-18 w-auto sm:h-20" />
                 <button
                   type="button"
                   onClick={handleMenuClose}

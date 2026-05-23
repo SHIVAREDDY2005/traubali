@@ -52,7 +52,7 @@ function HeroSection() {
             <section className="relative flex h-[51.25rem] flex-col items-center justify-center px-4 pt-20 text-center sm:h-[64rem] sm:px-5 lg:h-[85.5rem] xl:h-[51.25rem]">
               <Reveal className="flex justify-center">
                 <img
-                  src={heroData.logoSrc}
+                  src="src\assets\images\white.png"
                   alt="Taru Bali"
                   className="h-20 w-auto sm:h-24 xl:h-[7rem]"
                 />
@@ -66,7 +66,7 @@ function HeroSection() {
                 </Reveal>
 
                 <motion.img
-                  src="/from-bali.svg"
+                  src="src\assets\images\bali.png"
                   alt="From Bali"
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
