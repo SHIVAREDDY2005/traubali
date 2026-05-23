@@ -1,0 +1,256 @@
+@import url("https://use.typekit.net/kzr2ary.css?display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Perandory";
+  src: url("./assets/fonts/Perandory-Regular.786BTm_l.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --tb-green: #173b2c;
+  --tb-green-soft: #224535;
+  --tb-green-deep: #0d3b2a;
+  --tb-gold: #b8924f;
+  --tb-gold-soft: #d7af5e;
+  --tb-gold-dark: #947534;
+  --tb-cream: #f5f1e8;
+  --tb-cream-dark: #f1eee4;
+  --tb-text: #2f4b3c;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@layer base {
+  html {
+    background: var(--tb-cream);
+    color: var(--tb-green);
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--tb-cream);
+    color: var(--tb-green);
+    font-family: "montserrat", sans-serif;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--tb-cream);
+    background-image: url("./assets/images/background-1.DzovPDNZ.webp");
+    background-position: 100% 0;
+    background-repeat: repeat;
+    background-size: 36rem;
+    content: "";
+    opacity: 0.14;
+    pointer-events: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  *::selection {
+    background: var(--tb-green);
+    color: var(--tb-cream);
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  #root {
+    isolation: isolate;
+  }
+
+  [id] {
+    scroll-margin-top: 7rem;
+  }
+}
+
+@layer components {
+  .app-shell {
+    min-height: 100vh;
+  }
+
+  .font-display {
+    font-family: "Perandory", serif;
+  }
+
+  .accent-script {
+    font-family: "alex-brush", cursive;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .display-hero {
+    font-family: "Perandory", serif;
+    font-size: clamp(3.8rem, 9.4vw, 8.95rem);
+    line-height: 0.78;
+    letter-spacing: -0.085em;
+    text-transform: uppercase;
+  }
+
+  .display-section {
+    font-family: "Perandory", serif;
+    font-size: clamp(2.9rem, 6vw, 5.4rem);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+  }
+
+  .luxury-outline-button,
+  .luxury-solid-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    padding: 0.95rem 1.55rem;
+    font-size: 1rem;
+    line-height: 1;
+    transition:
+      transform 300ms ease,
+      background-color 300ms ease,
+      color 300ms ease,
+      border-color 300ms ease,
+      opacity 300ms ease;
+  }
+
+  .luxury-outline-button {
+    background: transparent;
+  }
+
+  .luxury-outline-button:hover {
+    transform: translateY(-1px);
+    background: var(--tb-gold-dark);
+    border-color: var(--tb-gold-dark);
+    color: var(--tb-cream);
+  }
+
+  .luxury-solid-button {
+    background: var(--tb-gold);
+    border-color: var(--tb-gold);
+    color: var(--tb-cream);
+  }
+
+  .luxury-solid-button:hover {
+    transform: translateY(-1px);
+    background: var(--tb-green);
+    border-color: var(--tb-green);
+    color: var(--tb-gold-soft);
+  }
+
+  .luxury-link {
+    position: relative;
+    width: fit-content;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+    padding-bottom: 0.1rem;
+    transition: opacity 300ms ease;
+  }
+
+  .luxury-link:hover {
+    opacity: 0.68;
+  }
+
+  .pill-tag {
+    display: inline-flex;
+    min-width: 12rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(23, 59, 44, 0.18);
+    border-radius: 999px;
+    padding: 0.58rem 1.05rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tb-green);
+  }
+
+  .menu-group-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .menu-overlay-link {
+    font-family: "Perandory", serif;
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    transition: opacity 300ms ease;
+  }
+
+  .menu-overlay-link:hover {
+    opacity: 0.62;
+  }
+
+  .scalloped-frame {
+    -webkit-mask-image: url("./assets/images/mask.BxkDtTKn.webp");
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: url("./assets/images/mask.BxkDtTKn.webp");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+  }
+
+  .hero-marquee {
+    overflow: hidden;
+  }
+
+  .hero-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 1.25rem;
+    animation: hero-marquee 18s linear infinite;
+    will-change: transform;
+  }
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.625rem));
+  }
+}
